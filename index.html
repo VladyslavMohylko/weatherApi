@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Weather with Vladosyk</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header id="header">
+            <div class="logo-title-container">
+                <img id="logo" src="./styles/img/5S66bilnqxY.jpg" alt="Logo">
+                <p class="weather-title">WEATHER "VOOOO!"</p>
+            </div>
+            <nav class="weather-type-control">
+                <a class="weather-type" href="#">Current weather</a>
+                <a class="weather-type" href="#">5-day weather</a>
+            </nav>
+        </header>
+        <section id="main">
+            <div class="main-content">
+                <h1 class="title">
+                    Weather with love by Vladosyk
+                </h1>
+                <div class="server-weather-response">
+                    <div class="current-weather">
+                        <p class="city">City</p>
+                        <p class="temp">temp</p>
+                        <p class="rain">rain</p>
+                        <p class="cloud">cloud</p>
+                        <p class="wind">wind</p>
+                    </div>
+                </div>
+                <div class="control-panel-request">
+                    <input class="city-input" placeholder="type your city" type="text">
+                    <input class="api-id" placeholder="type your personal id" type="password">
+                    <button class="ajax-request">AJAX</button>
+                    <button class="promise-request">Promise-Fetch</button>
+                    <button class="async-awit-request">Async-Fetch</button>
+                </div>
+            </div>
+            <aside class="adds-and-links">
+                <ul class="links">
+                    <li class="link">
+                        <a href="">Check out my progress on GitHub</a>
+                    </li>
+                    <li class="link">
+                        <a href="">Official Weather API - Open weather(Get your own ApiID)</a>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+        <footer id="footer">
+            Test Weather (c)
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

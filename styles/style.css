@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../styles/img/квіти.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+}
+/* header start */
+#header {
+    background-color: grey;
+    height: 100px;
+    padding: 0 5% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.6;
+}
+
+.logo-title-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#logo {
+    border-radius: 25px;
+    height: 85%;
+    width: 10%;
+}
+
+.weather-type-control {
+
+}
+
+.weather-type {
+    margin: 10px;
+}
+
+/* main start  */
+#main {
+    /* background-color: grey; */
+    display: flex;
+    padding: 0 5% 0;
+    flex-direction: row;
+    flex: 1 1 auto;
+}
+
+.main-content {
+    padding: 15px 0;
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+.server-weather-response {
+    min-height: 100px;
+    flex: 1 1 auto;
+    padding: 10px 15%;
+}
+
+.current-weather {
+    background-color: rgba(173, 216, 230, 0.3);
+
+}
+
+.control-panel-request {
+    
+}
+
+.city-input {
+    margin: 10px 0;
+}
+
+.api-id {
+    display: block;
+    margin: 10px auto;
+}
+
+.adds-and-links {
+    max-width: 20%;
+    background-color: lightcyan;
+    opacity: 0.3;
+}
+
+.link {
+    margin: 10px 0;
+}
+
+/* footer start  */
+#footer {
+    text-align: center;
+    padding: 0 5% 0;
+    background-color: lightblue;
+    min-height: 40px;
+    opacity: 0.7;
+}
