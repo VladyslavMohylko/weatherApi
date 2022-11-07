@@ -15,24 +15,11 @@
                 <p class="weather-title">WEATHER "VOOOO!"</p>
             </div>
             <nav class="weather-type-control">
-                <a class="weather-type" href="#">Current weather</a>
-                <a class="weather-type" href="#">5-day weather</a>
+                <a class="weather-type active" href="#">Current weather</a>
             </nav>
         </header>
         <section id="main">
             <div class="main-content">
-                <h1 class="title">
-                    Weather with love by Vladosyk
-                </h1>
-                <div class="server-weather-response">
-                    <div class="current-weather">
-                        <p class="city">City</p>
-                        <p class="temp">temp</p>
-                        <p class="rain">rain</p>
-                        <p class="cloud">cloud</p>
-                        <p class="wind">wind</p>
-                    </div>
-                </div>
                 <div class="control-panel-request">
                     <input class="city-input" placeholder="type your city" type="text">
                     <input class="api-id" placeholder="type your personal id" type="password">
@@ -40,14 +27,34 @@
                     <button class="promise-request">Promise-Fetch</button>
                     <button class="async-awit-request">Async-Fetch</button>
                 </div>
+                <div class="server-weather-response">
+                    <div class="current-weather">
+                        <div>
+                            <p>City:</p>
+                            <p class="city">Your</p>
+                        </div>
+                        <div>
+                            <p>Temperature:</p>
+                            <p class="temp">temp</p>
+                        </div>
+                        <div>
+                            <p>Clouds:</p>
+                            <p class="cloud">cloud</p>
+                        </div>
+                        <div>
+                            <p>Wind:</p>
+                            <p class="wind">wind</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <aside class="adds-and-links">
                 <ul class="links">
                     <li class="link">
-                        <a href="">Check out my progress on GitHub</a>
+                        <a target="_blank" href="https://github.com/VladyslavMohylko">Check out my progress on GitHub</a>
                     </li>
                     <li class="link">
-                        <a href="">Official Weather API - Open weather(Get your own ApiID)</a>
+                        <a target="_blank" href="https://openweathermap.org/">Official Weather API - Open weather(Get your own ApiID)</a>
                     </li>
                 </ul>
             </aside>

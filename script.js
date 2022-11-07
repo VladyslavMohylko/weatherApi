@@ -1,4 +1,3 @@
-
 const ajaxRequestButton = document.querySelector('.ajax-request');
 const promiseRequestButton = document.querySelector('.promise-request');
 const asyncRequestButton = document.querySelector('.async-awit-request');
@@ -29,25 +28,27 @@ const gettingWeatherInfo = (event) => {
         console.log(response);
         
         cityDom.textContent = response.name;
-        cityTempDom.textContent = 'temp:' + (Math.round(response.main.temp) - 273);
-        cityWindDom.textContent = 'wind:' + response.clouds.all;
-        cityCloudDom.textContent = 'cloud:' + response.wind.speed;
+        cityTempDom.textContent = (Math.round(response.main.temp) - 273);
+        cityWindDom.textContent = response.clouds.all + 'm/s';
+        cityCloudDom.textContent = response.wind.speed;
     } 
 }
 
 const promiseFetchRequest = () => {
     const promiseWeather = new Promise((resolve, reject) => {
         const {cityName, userApiID} = userData();
-        resolve(fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${userApiID}`)
-        .then(response => response.json()));
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${userApiID}`)
+        .then(response => {
+            resolve(response.json());
+        })
     });
 
     promiseWeather.then(data => {
         console.log(data);
         cityDom.textContent = data.name;
-        cityTempDom.textContent = 'temp:' + (Math.round(data.main.temp) - 273);
-        cityWindDom.textContent = 'wind:' + data.clouds.all;
-        cityCloudDom.textContent = 'cloud:' + data.wind.speed;
+        cityTempDom.textContent = (Math.round(data.main.temp) - 273);
+        cityWindDom.textContent = data.clouds.all + 'm/s';
+        cityCloudDom.textContent = data.wind.speed;
     });
 }
 
@@ -55,9 +56,9 @@ function asyncRequestShell () {
     asyncFetchRequest().then(data => {
         console.log(data);
         cityDom.textContent = data.name;
-        cityTempDom.textContent = 'temp:' + (Math.round(data.main.temp) - 273);
-        cityWindDom.textContent = 'wind:' + data.clouds.all;
-        cityCloudDom.textContent = 'cloud:' + data.wind.speed;
+        cityTempDom.textContent = (Math.round(data.main.temp) - 273);
+        cityWindDom.textContent = data.clouds.all + 'm/s';
+        cityCloudDom.textContent = data.wind.speed;
     })
 }
 
